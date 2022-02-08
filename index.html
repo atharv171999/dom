@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+</body>
+    <script>
+       
+        let body = document.querySelector("body")
+        let btn1 = document.createElement("button")
+        btn1.innerHTML = "red"
+        body.appendChild(btn1)
+        btn1.style.backgroundColor = "red"
+        btn1.style.height = "6rem"
+        btn1.style.width = "7rem"
+
+        let btn2 = document.createElement("button")
+        btn2.innerHTML = "blue"
+        body.appendChild(btn2)
+        btn2.style.width = "7rem"
+        btn2.style.marginLeft = "2rem"
+        btn2.style.backgroundColor = "blue"
+        btn2.style.height = "6rem"
+        
+        let btn3 = document.createElement("button")
+        btn3.innerHTML = "green"
+        body.appendChild(btn3)
+        btn3.style.width = "7rem"
+        btn3.style.marginLeft = "2rem"
+        btn3.style.backgroundColor = "green"
+        btn3.style.height = "6rem"
+        
+        btn1.addEventListener("click", function(){
+            body.style.backgroundColor = "red"
+            btn1.style.backgroundColor = "white"
+            btn2.style.backgroundColor = "blue"
+            btn3.style.backgroundColor = "green"
+            
+        
+            btn1.addEventListener("dblclick",function(){
+                body.style.backgroundColor = "white"
+                btn1.style.backgroundColor = "red"
+            })
+        })
+
+        btn2.addEventListener("click",function(){
+            body.style.backgroundColor = "blue"
+            btn2.style.backgroundColor = "white"
+            btn1.style.backgroundColor = "red"
+            btn3.style.backgroundColor = "green"
+
+            btn2.addEventListener("dblclick",function(){
+                body.style.backgroundColor = "white"
+                btn2.style.backgroundColor = "blue"
+            })
+
+        })
+
+        btn3.addEventListener("click",function(){
+            body.style.backgroundColor = "green"
+            btn3.style.backgroundColor = "white"
+            btn1.style.backgroundColor = "red"
+            btn2.style.backgroundColor = "blue"
+
+            btn3.addEventListener("dblclick",function(){
+                body.style.backgroundColor = "white"
+                btn3.style.backgroundColor = "green"
+            })  
+        })
+        body.addEventListener("click",function(){
+            // body.style.backgroundColor = "white"
+
+        })
+
+
+    </script>
+</html>
